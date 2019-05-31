@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des éléves{% endblock %}
+
+{% block body %}
+    <div class="container text-center  ">
+        <h1 class="mb-4">Etes vous sùr de vouloir supprimer l'élève <br><big><strong>{{ student.name }} {{ student.firstname }}</strong></big>  ? </h1>
+        <a href="{{path('liste_Students')}}" type="button" class="btn btn-primary mt-5">retour</a>
+        <a href="{{path('delete_Student_yes',{'id':student.id})}}" type="button" class="btn btn-danger mt-5 ml-4">Confirmer</a>
+    </div>
+{% endblock %}
